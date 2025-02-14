@@ -37,6 +37,10 @@ const sendReferralEmail = async (referrerEmail, refereeEmail) => {
   }
 };
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully!");
+});
+
 // REST API Endpoint
 app.post('/api/referrals', async (req, res) => {
   const { referrerName, referrerEmail, refereeName, refereeEmail } = req.body;
